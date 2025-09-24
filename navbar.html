@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Responsive Navbar using CSS</title>
+
+
+ <style>
+
+
+   nav {
+     background-color: green;
+     color: white;
+     display: flex;
+     justify-content: start;
+     padding: 0.5vw 1vw 0.5vw 0.5vw;
+   }
+
+
+   nav ul {
+     list-style: none;
+     display: flex;
+     gap: 2vw;
+     margin: 0;
+     padding: 0;
+   }
+
+
+   nav ul li a {
+     color: white;
+     text-decoration: none;
+   }
+
+
+   nav ul li a:hover {
+     color: lightgreen;
+   }
+
+
+   /* Hidden checkbox */
+   #menu-toggle {
+     display: none;
+   }
+
+
+   /* Hamburger button */
+   .menu-btn {
+     color: white;
+     cursor: pointer;
+     display: none;
+   }
+
+
+   /* Responsive */
+   @media (max-width: 400px) {
+     .menu-btn {
+       display: block;
+     }
+
+
+     nav ul {
+       position: fixed;
+       left: -100%; /* This hides the menu off-screen to the left */
+       margin: 20vh 3vw;
+       padding-left: 1vw;
+       background: green;
+       flex-direction: column;
+       width: fit-content;
+       justify-content: start;
+       align-items: start;
+       transition: 0.3s ease-in-out;
+       overflow: auto;
+
+
+     }
+
+
+     /* Toggle menu when checkbox is checked */
+     #menu-toggle:checked ~ ul {
+       left: 0; /* Adjust this value to control how much of the menu is shown */
+     }
+   }
+ </style>
+</head>
+
+
+<body>
+ <nav>
+
+
+  
+   <label for="menu-toggle" class="menu-btn">
+     ☰
+   </label>
+   <!-- This is a hamburger icon. On Windows: Press Win + . → Emoji/Unicode panel opens → search "trigram"  → select the ☰. On Mac: Press Control + Command + Space → Character Viewer → search "trigram".  -->
+   <input type="checkbox" id="menu-toggle">
+
+
+   <ul>
+     <li><a href="#">Home</a></li>
+     <li><a href="#">Services</a></li>
+     <li><a href="#">Tools</a></li>
+     <li><a href="#">Resources</a></li>
+   </ul>
+ </nav>
+</body>
+</html>
