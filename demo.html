@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> HTML Basics DEMO</title>
+        <style>
+            /*.header{
+                display: grid;
+                grid-template-columns: 1fr
+                1fr;
+                gap: 10px;
+                grid-template-areas: "item1 item2";
+            }
+
+            .item1{
+                background-color: lightblue;
+                text-align:center;
+                grid-area:item1;
+            }
+
+            .item2 {
+                background-color: lightgreen;
+                text-align:center;
+                grid-area: item2;
+            }*/
+
+            .header{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 1vw;
+                background-color: darkgreen;
+                color: white;
+            }
+
+            .item1{
+                flex: 0 0 auto;
+            }
+
+            .item2{
+                flex: 0 0 auto;
+            }
+
+            body {
+                background-color:azure;
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            form {
+                width: 40%;
+                background-color: white;
+                padding:20px;
+                border-radius: 8px; 
+            }
+
+            @media(max-width:400px){
+                body{
+                    background-color: red;
+                }
+
+
+            .header{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        </style>
+        <link rel = "stylesheet" href = "styles.css">
+        <!--JavaScript-->>
+    <script>
+     document.write("Hello World");
+
+     alert("Are you sure you want to leave this page?");
+     
+     console.log("Hello World");
+  </script>
+
+    </head>
+    <body>
+        <p> Open console to see the output </p>
+         <div id = "output"> </div>
+  <script>
+     document.getElementById("output").innerHTML = "Hello World";
+  </script>
+        <div class ="header">
+            <!-- <h1 style = "color:blue; text-align:center;">Welcome to <span id = "highlight">HTML!</span></h1> -->
+        <div class ="item1">
+            <h1>HTML</h1>
+        </div>
+        <div class="item2">
+            <h1>CSS</h1>
+        </div>
+        </div>
+        <p>This is a paragraph element. <b>HTML</b> uses tags to mark up content.</p>
+        <img src ="https://imgs.search.brave.com/_fbfAd8zlJbfu637As-5r4q_13Ht_H-MSgr1ZfdDSF8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNy8w/OC8wNS8xMS8xNi9s/b2dvLTI1ODI3NDhf/NjQwLnBuZw" alt="HTML logo">
+        <p>To learn more about HTML<a href = "https://www.w3schools.com/html/html_attributes.asp" target = "_blank"> <i>W3schools</i> </a> </p>
+        <p>Go to the second page<a href = "next.html" target = "_blank"> <i>Second page</i> </a> </p>
+        <p>The concepts that will be covered here are:</p>
+        <ol>
+            <li>HTML Lists</li>
+            <li>HTML Forms</li>
+            <li>HTML Tables</li>
+        </ol>
+        <table>
+            <caption>Personal information</caption>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Age</td>
+            </tr>
+            <tr>
+                <td>Sangay</td>
+                <td>Wangmo</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>Karma</td>
+                <td>Zangmo</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Sonam</td>
+                <td>Pelki</td>
+                <td>20</td>
+            </tr>
+        </table>
+        <form>
+  <fieldset>
+    <legend>User Personal Information</legend>
+    <label for="name">Enter your full name:</label>
+    <input type="text" id="name" name="name" required />
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email" required />
+    <label for="password">Enter your password:</label>
+    <input type="password" id="password" name="password" required />
+
+    <label>Enter your gender:</label>
+    <div class="gender-group">
+      <input type="radio" name="gender" value="male" id="male" required />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" value="female" id="female" />
+      <label for="female">Female</label>
+      <input type="radio" name="gender" value="others" id="others" />
+      <label for="others">Others</label>
+    </div>
+
+    <label for="dob">Enter your Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required />
+    <label for="designation">Occupation:</label>
+    <select id="designation" name="occupation">
+      <option value="government">Government Services</option>
+      <option value="private">Private Sector</option>
+    </select>
+
+    <label for="address">Enter your Address:</label>
+    <textarea id="address" name="address" required></textarea>
+    <input type="submit" value="Submit" />
+  </fieldset>
+</form>
+<script>
+     function test() {
+        let bool = true;
+        if (bool) {
+           let x = 30; //block scoped variable
+           const z = 50; //block scoped variable
+           var y = 40; //global scoped variable
+           document.write("x = " + x + ", y = " + y + ", z = " + z + "<br/>");
+        }
+         // y can be accessible here
+       document.write("y = " + y + "<br/>");
+
+
+        // x can't be accessible here
+        document.write("x = " + x + "<br/>");
+       }
+     test();
+</script>
+
+<h2>JavaScript Data Types Example</h2>
+ <div id="results"></div>
+
+
+ <script>
+   // A helper function to print to the page
+   function print(message) {
+     const resultsDiv = document.getElementById("results");
+     const p = document.createElement("div");
+     p.className = "output";
+     p.textContent = message;
+     resultsDiv.appendChild(p);
+   }
+
+
+   // --- Primitive Data Types ---
+   let str = "Hello, JavaScript!"; // String
+   document.write("String: " + str + "<br/>");
+
+
+   let num = 42; // Number
+   let pi = 3.14159; // floating point number
+   document.write("Number: " + num + " and " + pi + "<br/>");
+
+
+   let isStudent = true; // Boolean
+   let isTeacher = false; // Boolean
+   document.write("Boolean: " + isStudent + ", " + isTeacher + "<br/>");
+
+
+   let emptyValue = null;
+   document.write("Null: " + emptyValue + "<br/>");
+
+
+   let notAssigned;
+   document.write("Undefined: " + notAssigned + "<br/>");
+
+
+   let bigNumber = 1234567890123456789012345678901234567890n;
+   document.write("BigInt: " + bigNumber + "<br/>");
+
+
+   let sym1 = Symbol("id"); // Create a symbol
+   let sym2 = Symbol("id");
+   document.write("Symbol 1: " + sym1.toString() + "<br/>"); // Convert symbol to string for display
+   document.write("Symbol 2: " + sym2.toString() + "<br/>");
+   document.write("Are sym1 and sym2 equal? " + (sym1 === sym2) + "<br/>");
+
+// --- Non-Primitive (Object) ---
+   let student = {
+     name: "Tashi",
+     age: 21,
+     isEnrolled: true,
+     scores: [85, 90, 78],
+     address: {
+       city: "Thimphu",
+       country: "Bhutan"
+     }
+   }; // Create an object
+
+
+   document.write("Object: " + JSON.stringify(student) + "<br/>"); //Convert object to string for display
+
+
+   document.write("Student Name: " + student["name"] + "<br/>");
+   document.write("Student Age: " + student["age"] + "<br/>");
+   document.write("City: " + student.address.city + "<br/>");
+   document.write("First Score: " + student.scores[0] + "<br/>");
+ </script>
+
+<!--if-else statement-->>
+ <script>
+    const temp = 25; // You can change this value to test different outputs
+// Check the temperature and respond accordingly
+if (temp > 30) { // Hot if temperature is above 30
+   console.log("It's hot.");
+} else if (temp >= 20) { // Warm if temperature is between 20 and 30
+   console.log("It's warm.");
+} else { // Cold if temperature is below 20
+   console.log("It's cold.");
+}
+ </script>
+
+<!--switch statement-->>
+ <script>
+    const day = "Monday"; // You can change this value to test different outputs
+// Check the day and respond accordingly
+switch (day) // Start of switch statement
+{
+   case "Monday": // If day is Monday
+       console.log("Start of the week.");
+       break;
+   case "Friday": // If day is Friday
+       console.log("End of the workweek.");
+       break;
+   default:
+       console.log("It's a regular day.");
+}
+ </script>
+ <!--Ternary/Conditional Operator-->>
+ <script>
+    let number = 10;
+console.log(number === 5 ? "number is equal to 5" : "number is not equal to 5");
+ </script>
+
+<!--for loop-->>
+ <script>
+ for (let i = 1; i <= 3; i++) {
+   console.log("Count:", i);
+}
+</script>
+
+<!--while loop-->
+<script>
+  let i = 0;
+while (i < 3) {
+   console.log("Number:", i);
+   i++;
+}  
+</script>
+
+<!--do-while loop-->
+<script>
+  "let i = 0";//Using inverted comma to avoid declaring it as variable//
+do {
+   console.log("Iteration:", i);
+   i++;
+} while (i < 3);
+</script>
+
+<!--for-in loop-->
+<script>
+    const obj = { name: "Ashish", age: 25 }; // Sample object
+// Iterate over the object's properties using for...in loop
+for (let key in obj) // loop through each key in the object
+   {
+   console.log(key, ":", obj[key]); // print each key-value pair
+}
+</script>
+
+<!--for-of loop-->
+<script>
+    let a = [1, 2, 3, 4, 5]; // Sample array
+// Iterate over the array using for...of loop
+for (let val of a) // loop through each value in the array
+{
+   console.log(val); // print each value
+}
+</script>
+</body>
+</html>
