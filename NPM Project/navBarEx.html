@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+
+<body>
+    <div class="navbar nabar-expend-md
+    navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MyWebsite</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- 'nav-item' - represents each list item (menu link) -->
+                    <!-- 'nav-link' - applies Bootstrap link styling -->
+                    <!-- 'active' - highlights the current page link -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="container mt-4">
+
+
+                <!-- 'border' gives the form a thin border -->
+                <!-- 'rounded-3' rounds the corners (size 3 gives medium rounding) -->
+                <!-- 'bg-light' gives the form a light gray background -->
+                <form class="p-4 border rounded-3 bg-light">
+
+
+                    <h4 class="mb-3">Contact Us</h4>
+
+
+                    <!-- Form group for Full Name field -->
+                    <div class="mb-3">
+                        <!-- 'form-label' styles the label text appropriately for forms -->
+                        <label for="name" class="form-label">Full Name</label>
+
+
+                        <!-- 'form-control' gives a consistent Bootstrap-styled input box -->
+                        <!-- 'placeholder' displays hint text inside the box -->
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+
+
+                    <!-- Form group for Email Address field -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+
+
+                    <!-- Form group for Message textarea -->
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+
+
+                        <!-- 'form-control' styles textarea similar to input boxes -->
+                        <!-- 'rows="3"' sets visible height of textarea -->
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+
+
+                    <!-- Submit button -->
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+           <div class="container-fluid mt-4"> 
+                <div class="card" style="width: 25vw;">
+                    <img src="./images/received_878172842806788.jpeg"
+                    class="card-img-top" alt="Sample Image">
+                
+                <div class="card-body">
+                    <h5 class="card-title">Card Title</h5>
+
+                    <p class="card-text"> This is a short description inside a card</p>
+
+                    <a href="#" class="btn btn-primary">Learn More</a>
+            
+                </div>
+        </div>
+</body>
+
+</html>
